@@ -1,0 +1,75 @@
+* {
+    margin:  0;
+    padding:  0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ECEFF4; /* Soft background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height:  100vh;
+}
+
+.calculator {
+    width:  400px;
+    background-color: #FFFFFF; /*background branco */
+    padding:  20px;
+    border-radius:  25px;
+    box-shadow:  20px  20px  60px rgba(0,  0,  0,  0.1), -20px -20px  60px rgba(255,  255,  255,  0.7); /* Neumorphic shadow */
+}
+
+.display {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width:  100%;
+    height:  80px;
+    margin-bottom:  20px;
+    padding:  15px;
+    border-radius:  15px;
+    background-color: #FFFFFF; /* background branco  */
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+    font-size:  2rem;
+    box-shadow: inset  10px  10px  20px rgba(0,  0,  0,  0.1), inset -10px -10px  20px rgba(255,  255,  255,  0.7); /* Inner shadow for depth */
+}
+
+.calculator-buttons {
+    display: grid;
+    grid-template-columns: repeat(4,  1fr);
+    gap:  10px;
+}
+
+.calculator button {
+    background-color: #ECEFF4; /* Soft background color */
+    color: #000000;
+    padding:  20px;
+    border-radius:  15px;
+    font-size:  1.5rem;
+    outline: none;
+    cursor: pointer;
+    border: none; /* Removed border for a cleaner look */
+    box-shadow:  5px  5px  15px rgba(0,  0,  0,  0.1), -5px -5px  15px rgba(255,  255,  255,  0.7); /* Neumorphic shadow */
+    transition: transform  0.1s ease-in-out; /* Slight hover effect */
+}
+
+button:hover {
+    transform: translateY(-3px); /* Hover effect */
+}
+
+/* Additional styles for special buttons */
+#clear {
+    grid-column: span  2; /* Clear button spans two columns */
+    background-color: #FF4B5C; /* Red background for the clear button */
+    color: #FFFFFF;
+    box-shadow:  5px  5px  15px rgba(255,  69,  92,  0.1), -5px -5px  15px rgba(255,  255,  255,  0.7); /* Shadow with red tinge */
+}
+
+#equals {
+    grid-column: span  2; /* Equals button spans two columns */
+    background-color: #4BFF4B; /* Green background for the equals button */
+    color: #FFFFFF;
+    box-shadow:  5px  5px  15px rgba(75,  255,  75,  0.1), -5px -5px  15px rgba(255,  255,  255,  0.7); /* Shadow with green tinge */
+}
