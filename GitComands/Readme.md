@@ -1,16 +1,10 @@
-# Codigos uteis Github
+# Códigos úteis Github
 
 ## Comandos 
+
+### Clonar repositório
 ```bash
-# Clonar repositorio
+git clone https://github.com/seu-usuario/seu-repositorio.git
 
- git clone https://github.com/
-
-
-## Não comitar alguma pasta do repositorio
- # Criar um arquivo 
- .gitignore
- # escrever a pasta a ser ignorada nele
- git add .gitignore
- git commit -m "commit"
- 
+echo > .gitignore
+Não comitar alguma pasta do repositório
