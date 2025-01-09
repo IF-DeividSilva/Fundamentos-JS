@@ -10,6 +10,7 @@ git clone https://github.com/
 ```bash
 Criar um arquivo .gitignore
 Escrever a pasta a ser ignorada nele
+
 git add .gitignore
 git commit -m "commit"
 ```	
