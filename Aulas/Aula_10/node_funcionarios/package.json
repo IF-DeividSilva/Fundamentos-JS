@@ -1,0 +1,21 @@
+{
+  "name": "node_funcionarios",
+  "version": "1.0.0",
+  "description": "Descrevendo...",
+  "main": "comands.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "repositorio Desilv"
+  },
+  "keywords": [
+    "da"
+  ],
+  "author": "Deivid",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.7.9"
+  }
+}
