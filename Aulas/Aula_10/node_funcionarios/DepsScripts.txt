@@ -1,0 +1,10 @@
+------------------------------------------------------------------------------------------------
+Em package.json 
+- Campo Scripts
+-> Pode ser colodados Scripts que funcionaram como "atalhos" na hora de executar comandos 
+------------------------------------------------------------------------------------------------
+
+Exemplo:
+No terminal: npm run "nome do script"
+
+
