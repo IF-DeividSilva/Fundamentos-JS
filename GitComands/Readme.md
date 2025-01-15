@@ -34,14 +34,22 @@ git commit -m "commit"
 ```bash
 git push
 ```
-
+### Ver historico
+```bash
+git hist
+```
 ### Branch
 ```bash
 Basicamente é uma ramificação de um projeto
 --> Eh um ponteiro para um commit
---> A branch master 
-
-
+--> A branch master ve tudo que as outras branches commitaram mais as outras branches não veem o que a master fez.
 ```
-![Texto alternativo](https://github.com/IF-DeividSilva/Fundamentos-JS/blob/main/Aulas/Aula_10/node/image.png)
-
+![img](https://github.com/IF-DeividSilva/Fundamentos-JS/blob/main/Aulas/Aula_10/node/image.png)
+#### Criar uma nova Branch
+```bash
+git branch "Nome_da_Branch"
+```
+#### Trocar de Branch
+```bash
+git switch "Nome_Branch"
+```
