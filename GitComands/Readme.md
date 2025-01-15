@@ -41,7 +41,7 @@ Basicamente é uma ramificação de um projeto
 --> Eh um ponteiro para um commit
 --> A branch master 
 
-![Texto alternativo](https://github.com/IF-DeividSilva/Fundamentos-JS/blob/main/Aulas/Aula_10/node/image.png)
 
 ```
+![Texto alternativo](https://github.com/IF-DeividSilva/Fundamentos-JS/blob/main/Aulas/Aula_10/node/image.png)
 
