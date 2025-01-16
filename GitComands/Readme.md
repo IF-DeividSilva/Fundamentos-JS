@@ -53,3 +53,9 @@ git branch "Nome_da_Branch"
 ```bash
 git switch "Nome_Branch"
 ```
+
+#### Excluir Branch
+```bash
+git branch -d "Nome_Branch"
+* Não é possivel remover a branch corrente
+```
