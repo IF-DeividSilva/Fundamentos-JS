@@ -59,3 +59,55 @@ git switch "Nome_Branch"
 git branch -d "Nome_Branch"
 * Não é possivel remover a branch corrente
 ```
+
+### Tags
+```bash
+As tags são etiquetas, geralmente usadas para marcar lançamentos estáveis ou marcos importantes
+--> tags são imutáveis 
+```
+
+#### Tags Anotadas
+```bash
+git tag -a "number-vesion" -m "nome-version"
+```
+#### Listar Tags
+```bash
+git tag
+```
+
+#### Enviar Tags para o repositorio
+```bash
+git push --tags
+```
+### Descartar Alterações (Area de Trabalho ('Antes do git add'))
+```bash
+git restore nome_Arquivo
+```
+### Descartar Alterações (Area de Preparo ('Depois do git add'))
+```bash
+git restore --staged nome_Arquivo 
+ou 
+git restore --staged . (todos)
+```
+### Descartar Alterações (Já commitadas)
+```bash
+git revert head
+```
+
+### Descartar Alterações (Com Reset) 
+
+#### Soft
+```bash
+git reset --soft head~
+```
+#### Mixed (Padrão)
+```bash
+git reset head~
+```
+
+#### Hard (Não Preseva em nenhum lugar)
+```bash
+git reset --hard head~
+```
+
+
