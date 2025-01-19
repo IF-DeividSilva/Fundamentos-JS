@@ -34,6 +34,10 @@ git commit -m "commit"
 ```bash
 git push
 ```
+### Sincronizar com reposidorio remoto
+```bash
+git pull
+```
 ### Ver historico
 ```bash
 git hist
@@ -111,3 +115,6 @@ git reset --hard head~
 ```
 
 
+```bash
+
+```
