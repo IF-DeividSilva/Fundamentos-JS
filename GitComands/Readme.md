@@ -2,6 +2,17 @@
 
 ## Comandos
 
+### Configurar um repositorio como Git
+```bash
+git init
+```
+
+### Ajustar nome e Emai padrão
+```bash
+git config --global user.email "endereco email"
+git config --global user.name "Seu nome"
+```
+
 ### Verificar estado atual do repositorio
 ```bash
 git status
@@ -114,7 +125,40 @@ git reset head~
 git reset --hard head~
 ```
 
-
+### Submodulos
+#### Usado para add repositorios dentro do seu repositorio
 ```bash
+git submodule add <"URL_REPO">
+```
+##### Inicializar os submodules
+```bash
+ git submodule ini
+```
+##### Realizar o download dos arquivos dos submodules
+```bash
+ git submodule update
+```
 
+### Stash
+#### Quando é necessário alternar brenches sem que as alterações da brench atual tenham sido terminadas e comitadas. Nesse caso as alterações são salvas em um pilha para não ficarem conflitantes e não serem perdidas.
+##### Manda para pilha
+```bash
+ git stash
+```
+##### Lista a pilha
+```bash
+ git stash list
+```
+##### Aplica as alterações da primeira entrada da pilha 
+```bash
+ git stash apply stash@{1}
+```
+##### Retornar as alterações da pilha para área de trabalho
+```bash
+ git stash pop
+```
+
+##### Limpar as entradas da pilha
+```bash
+ git stash clean
 ```
