@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios HTML</title>
+    <style>
+        #conteudo {
+            padding: 30px 0px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo ao site Exercícios HTML!</h1>
+    </header>
+    <nav>
+        <a href="exercicios/teste.html">00 - Teste</a> | 
+        <a href="exercicios/app.html">01 - App</a>  |
+        <a href="exercicios/texto.html">02 - Texto</a>
+        
+    
+    </nav>
+    <section id="conteudo"> </section>
+
+    <footer>
+        <br>
+        <p>© 2026 Exercícios HTML. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a').forEach(link => {
+            link.onclick = function(event) {
+                event.preventDefault();
+
+                const conteudo = document.getElementById('conteudo');
+                conteudo.innerHTML = 'Carregando...';   
+                
+                 // requisição ajax
+                fetch(link.getAttribute('href'))
+                    // pega o conteudo html da pagina requisitada
+                    .then(response => response.text())
+                    // insere o conteudo na div conteudo
+                    .then(html => {
+                        document.getElementById('conteudo').innerHTML = html;
+                    });
+            }
+        })
+    </script>
+</body>
+</html>
