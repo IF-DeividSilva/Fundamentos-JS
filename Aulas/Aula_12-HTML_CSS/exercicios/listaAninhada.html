@@ -1,0 +1,52 @@
+<h1>Listas Aninhadas</h1>
+<ul class = "tree">
+    <li>
+        <span folder> Back-end </span>
+        <ul>
+            <li>
+                <span folder> app </span>
+                <ul>
+                    <li>produto.js</li>
+                    <li>usuario.js</li>
+                    <li>vendas.js</li>
+                </ul>
+            </li>
+            <li>
+                <span folder> config </span>
+                <ul>
+                    <li>database.js</li>
+                    <li>server.js</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <span folder> Front-end </span>
+        <ul>
+            <li>
+                <span folder> css </span>
+                <ul>
+                    <li>estilos.css</li>
+                    <li>reset.css</li>
+                </ul>
+            </li>
+            <li>
+                <span folder> js </span>
+                <ul>
+                    <li>app.js</li>
+                    <li>utils.js</li>
+                </ul>
+            </li>
+        </ul>
+
+<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+
+<script>
+    document.querySelectorAll('[folder]').forEach(folder => {
+        folder.onclick = function(e) {
+            const ul = folder.nextElementSibling;
+            const atual = ul.style.display;
+            ul.style.display = atual === 'none' ? 'block' : 'none';
+        }
+    })
+</script>
