@@ -1,3 +1,4 @@
+<div slider>
 <p>
     <img src="http://files.cod3r.com.br/curso-web/imagem1.jpg" 
     alt="muro da cidade" 
@@ -33,7 +34,15 @@
         <source srcset="http://files.cod3r.com.br/curso-web/logo-estreita.jpg" media="(min-width: 500px)">
         <img src="http://files.cod3r.com.br/curso-web/imagem4.png" alt="Cidade">
     </picture>
+</div>
+
+
 <style>
+    p {
+        position: absolute;
+        display: none;
+    }
+
     .circular img{
         border-radius: 50%;
     }
@@ -51,3 +60,38 @@
         background-position: center;
         border: 2px solid black;
     }
+</style>
+
+<script>
+    // exibindo os paragrafos um a um com delay em loop
+    function executarSlider() {
+        const ps = document.querySelectorAll('div[slider] p');
+        let index = 0;
+
+        // Função para mostrar o próximo parágrafo
+        function mostrarProximo() {
+            // Esconder todos os parágrafos
+            ps.forEach(p => p.style.display = 'none');
+            // Mostrar o parágrafo atual
+            ps[index].style.display = 'block';
+            ps[index].style.left = '0px'; // Começa na esquerda
+            
+            let pos = 0;
+            const intervalo = setInterval(() => {
+                pos += 5; // Move 5 pixels por vez
+                ps[index].style.left = pos + 'px';
+                
+                // Se saiu da tela, passa para a próxima imagem
+                if (pos >= window.innerWidth) {
+                    clearInterval(intervalo);
+                    index = (index + 1) % ps.length; // Volta ao início após o último
+                    mostrarProximo(); // Chama recursivamente para a próxima imagem
+                }
+            }, 30); // Velocidade do movimento
+        }
+
+        // Mostrar o primeiro parágrafo
+        mostrarProximo();
+    }
+    executarSlider();
+</script>

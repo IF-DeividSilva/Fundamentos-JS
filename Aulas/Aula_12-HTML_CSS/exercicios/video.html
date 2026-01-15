@@ -1,0 +1,59 @@
+<video id="meuVideo" width="800" height="450" controls autoplay>
+   <source src="videoplayback.mp4" type="video/mp4">
+</video>
+
+<div id="progresso" class="progresso">
+    <div></div>
+</div>
+
+<div>
+    <button play="meuVideo">Play</button>
+    <button pause="meuVideo">Pause</button>
+</div>
+    
+<style>
+    .progresso {
+        width: 500px;
+        height: 20px;
+        border: 1px solid #444;
+        margin: 20px;
+    }
+
+    .progresso > div {
+        height: 100%;
+        width: 0%;
+        color: white;
+        background-color: red;
+        text-align: right;
+        font-size: 14px;
+    }
+</style>
+
+<script>
+    // pega o elemento do video e da barra de progresso
+    const video = document.getElementById('meuVideo');
+    const progresso = document.querySelector('.progresso > div');
+
+    // atualiza a barra de progresso conforme o video avança
+    video.ontimeupdate = function() {
+        // calcula a porcentagem do video que já foi reproduzido
+        const porcentagem = (video.currentTime / video.duration) * 100;
+        // atualiza a largura e o texto da barra de progresso
+        progresso.style.width = porcentagem + '%';
+        // atualiza o texto da barra de progresso (1%, 2%, etc)
+        progresso.textContent = Math.floor(porcentagem) + '%';
+    };
+
+    // adiciona eventos de clique nos botões de play e pause
+    document.querySelectorAll('button').forEach(botao => {
+        botao.onclick = function() {
+            // determina se o botão é de play ou pause
+            const acao = botao.getAttribute('play') ? 'play' : 'pause';
+            // pega o id do video alvo
+            const idVideo = botao.getAttribute(acao);
+            // pega o elemento do video e executa a ação
+            const videoAlvo = document.getElementById(idVideo);
+            videoAlvo[acao]();
+        };
+    });
+</script>
