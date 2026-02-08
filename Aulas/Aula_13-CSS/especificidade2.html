@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Especificidade CSS</title>
+    <style>
+        /* https://specificity.keegan.st/ */ 
+        /*
+            1. Inline styles (e.g., style="...") - 1000
+            2. IDs (e.g., #id) - 100
+            3. Classes, attributes, e pseudo-classes (e.g., .class,
+            4. Elementos, pseudo-elementos (e.g., div, p)
+        */
+
+        body {
+            font-size: 40px;
+        }
+        div{
+            background-color: lightgray;
+        }
+
+        div[wm-color] {
+            background-color: lightgreen;
+        }
+        div:hover {
+            background-color: lightsalmon;
+        }
+        div.estilo {
+            background-color: lightblue;
+        }
+        #unico1, #unico2 {
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="unico1" class="estilo" style=" background-color: magenta;">
+        #unico1 vs .estilo vs inline
+    </div>
+    <div id="unico2" class="estilo">#unico2 vs .estilo</div>
+    <div class="estilo" wm-cor>.estilo vs wm-cor</div>
+    <div wm-cor>wm-cor</div>
+    <div class="estilo">.estilo</div>
+    <div>elemento</div>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Especificidade CSS</title>
+    <style>
+        /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity */
+    /*
+
+    1. Regra com !important
+    2. Seletores mais específicos (id > classe > elemento)
+    3. Ordem de declaração (última regra declarada tem prioridade)
+
+    */
+        /* Seletor de elemento */
+        p {
+            color: red;
+        }
+        /* Seletor de classe */
+        .observacao {
+            color: blue;
+        }
+        /* Seletor de id */
+        #importante {
+            color: green;
+        }
+         /* Regra com !important */
+         .observacao {
+            color: orange !important;
+        }
+    </style>
+</head>
+
+<body>
+    <p class='observacao'>Olha essa observação!!!!</p>
+</body>
+
+</html>
