@@ -4,9 +4,24 @@
     <meta charset="UTF-8">
     <title>Tamanho Box</title>
     <style>
+        /*Seletor universal*/
+        *{
+            /*Usado pra levar em consideração as bordas na hora de calcular o tamanho total do elemento*/
+            box-sizing: border-box;
+        }
         body {
             font-size: 45px;
+            margin: 0;
         }
+
+        div {
+            background-color: aqua;
+            width: 100%;
+            height: 300px;
+            padding: 100px;
+            border: solid 20px;
+        }
+
     </style>
 </head>
 <body>
