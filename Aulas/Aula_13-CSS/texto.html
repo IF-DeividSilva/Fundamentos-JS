@@ -16,6 +16,53 @@
             flex-direction: column;
             align-items: center;
         }
+
+        p {
+            /*Valores padroes*/
+            font-size: 1em;
+            font-size: 100%;
+            font-size: 16px;
+            font-size: 12pt;
+
+            /*Valores personalizados*/
+            font-size: 100px; /*Tamaho do pixel eh relativo*/
+            font-size: 72pt; /*Tamanho do ponto eh absoluto*/
+            font-size: 1in; /*Tamanho da polegada eh absoluto*/
+
+            /*unidades relativas*/
+            font-size: 2em; /*Relativo ao elemento pai*/
+            font-size: 2rem; /*Relativo ao elemento raiz*/
+            font-size: 50vh; /*Relativo a altura da tela*/
+            font-size: 50vw; /*Relativo a largura da tela*/
+
+            /*familia de fontes*/
+            font-family: monospace;
+            font-family: Georgia, serif; /*Caso a fonte Georgia nao esteja disponivel, o navegador ira usar a fonte serif*/
+            font-family: 'Indie Flower', cursive; /*Caso a fonte Indie Flower nao esteja disponivel, o navegador ira usar a fonte cursive*/
+            font-weight: 100;
+            font-style: italic;
+            text-transform: uppercase;
+            word-spacing: 10px;
+            letter-spacing: 20px;
+            line-height: 2.5em;
+            text-align: center;
+        }
+
+        .botao {
+            font-size: 28px;
+            text-decoration: none;
+            padding: 10px 30px;
+            border-radius: 25px;
+        }
+
+        .destaque {
+            color: #fff;
+            background-color: #ff0000;
+            box-shadow: 2px 2px 1px 1px #000;
+        }
+        .destaque:active {
+            box-shadow: none;
+        }
     </style>
 </head>
 

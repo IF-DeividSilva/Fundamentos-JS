@@ -7,7 +7,80 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <style>
-        /* ... */
+        /*add border box em todos */
+        * {
+            box-sizing: border-box;
+
+        }
+        body {
+            font-family: 'Oswald', sans-serif;
+            background-color: rgba(201, 201, 201, 0.24);
+        }
+        /*Colocar cor de fundo e cor do texto do navbar*/
+        nav, .logo {
+            position: relative;
+            background-color: powderblue;
+            color: white;
+        }
+        /*Deixar a navegação horizontal*/
+        li {
+            display: inline-block;
+            padding: 10px;
+            color: white;
+
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .autenticacao {
+            display: inline-block;
+            position: absolute;
+            right: 20px;
+            top: 120px;
+
+
+        }
+        .menu-toggle {
+            display: none;
+        }
+
+        .menu ul {
+            margin: 0;
+            padding: 0;
+
+        }
+        
+        .menu a:hover, .menu a.selected {
+            background-color: rgb(120, 218, 231);;
+        }
+
+        .botao {
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin: 5px;
+        }
+
+        .destaque {
+            background-color: #ff0000;
+            color: #fff;
+        }
+        /*Caso o tamanho da tela seja menor que 600px*/
+        @media (max-width: 600px){
+            /*Esconder o menu e os links de autenticação*/
+            .menu, .autenticacao {
+                display: none;
+            }
+            /*Exibir o ícone de menu*/
+            .menu-toggle {
+                background-color: powderblue;
+                display: inline-block;
+            }
+        }
+        
+
     </style>
 </head>
 
@@ -44,7 +117,24 @@
     </header>
 
     <script>
-        // ...
+        // adicionar um evento para o clique na navbar
+        // Selecionar itens do menu 
+        window.onhashchange = function (e) {
+            // Obter o hash antigo e o novo da URL
+            const oldURL = e.oldURL.split('#')[1];
+            const newURL = e.newURL.split('#')[1];
+            // Selecionar o link antigo e o novo usando os seletores de atributo
+            const oldLink = document.querySelector(`.menu a[href="#${oldURL}"]`);
+            const newLink = document.querySelector(`.menu a[href="#${newURL}"]`);
+            // Remover a classe "selected" do link antigo e adicionar ao novo
+            if (oldLink) {
+                oldLink.classList.remove('selected');
+            }
+            if (newLink) {
+                newLink.classList.add('selected');
+            }
+
+        }
     </script>
 </body>
 

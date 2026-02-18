@@ -6,7 +6,29 @@
     <title>Flexbox #03</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        div {
+            border: solid 5px dodgerblue;
+            font-size: 40px;
+        }
+
+        .flex-container div {
+            box-sizing: border-box;
+            /*main axis*/
+            flex-direction: row;
+        }
+
+        .flex-container {
+            display: flex;
+            /*Define a dimensão inicial de cada item flexível*/
+            flex-basis: 100px;
+        }
+        
+        .flex-container div:nth-child(3) {
+            /*usar os flexs em uma unica linha...*/
+            /*grow shrink basis*/
+            flex: 3 6 100px;
+
+        }
     </style>
 </head>
 

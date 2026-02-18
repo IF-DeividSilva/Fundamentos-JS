@@ -12,6 +12,27 @@
             border: solid 5px;
             display: none;
         }
+
+        /* O operador "max-width" eh usado para aplicar as regras de estilo quando a largura da tela for menor ou igual a um valor especificado. */
+        @media (max-width: 600px) {
+            .muito-pequeno {
+                display: block;
+            }
+        }
+
+        /* O operador "or" eh representado por uma virgula, ou seja, as regras do operador "or" serao aplicadas quando pelo menos uma das condicoes for verdadeira. */
+        @media (max-width: 1000px), (orientation: portrait) {
+            .pequeno-retrato {
+                display: block;
+            }
+        }
+
+        /* O operador "and" tem precedencia sobre o operador "or", ou seja, as regras do operador "and" serao aplicadas antes das regras do operador "or". */
+        @media (min-width: 500px) and (max-width: 1500px) {
+            .intervalo {
+                display: block;
+            }
+        }
     </style>
 </head>
 <body>
