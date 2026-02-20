@@ -20,6 +20,28 @@
             border: solid 5px dodgerblue;
             background: #fff;
         }
+
+        body {
+            display: grid;
+            grid-template-columns: [l1] 1fr [l2] 1fr [l3] 1fr [fim];
+            grid-template-rows: repeat(3, 1fr);
+        }
+
+        .d1 {
+            grid-column-start: l2;
+            grid-column-end: fim;
+            grid-row: 1/span 2;
+            grid-area: 1 / l1 / span 3 / fim;
+
+            column-gap: 20px;
+            row-gap: 20px;
+
+            /*gap é um atalho para definir o espaçamento entre as linhas e colunas*/
+            gap: 50px 20px;
+            /*gap: 20px; é o mesmo que gap: 20px 20px; */
+            gap : 20px;
+
+        }
     </style>
 </head>
 
